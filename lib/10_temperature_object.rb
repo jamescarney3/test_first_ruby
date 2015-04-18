@@ -2,7 +2,6 @@ class Temperature
   # TODO: your code goes here!
   def initialize(opts = {})
     @opts = opts
-    puts opts.to_s + "!"
   end
   
   
@@ -33,13 +32,13 @@ class Temperature
 end
 
 class Celsius < Temperature
-
+  def initialize(temp)
+    super({:c => temp})
+  end
 end
 
 class Fahrenheit < Temperature
-
+  def initialize(temp)
+    super({:f => temp})
+  end
 end
-
-var = Celsius.new(50)
-
-
